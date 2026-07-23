@@ -1,5 +1,5 @@
 {
-  "name": "@swell/container",
+  "name": "@swell-enterprise/container",
   "version": "0.0.1",
   "description": "A simple DI container for TypeScript projects.",
   "author": "Keith Mifsud <mifsud.k@gmail.com> (https://keith-mifsud.me)",
