@@ -8,6 +8,15 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keithmifsud/swell-container.git"
+  },
+  "bugs": {
+    "url": "https://github.com/keithmifsud/swell-container/issues"
+  },
+  "homepage": "https://keith-mifsud.me/collaborate/",
   "exports": {
     ".": {
       "import": {
@@ -25,8 +34,8 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsdown src/SwellContainer.ts --format esm,cjs --dts",
-    "dev": "tsdown src/SwellContainer.ts --format esm,cjs --dts --watch",
+    "build": "tsdown src/index.ts --format esm,cjs --dts",
+    "dev": "tsdown src/index.ts --format esm,cjs --dts --watch",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "package": "pnpm pack",
