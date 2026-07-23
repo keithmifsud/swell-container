@@ -2,6 +2,8 @@
   "name": "@swell/container",
   "version": "0.0.1",
   "description": "A simple DI container for TypeScript projects.",
+  "author": "Keith Mifsud <mifsud.k@gmail.com> (https://keith-mifsud.me)",
+  "license": "Apache-2.0",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -19,7 +21,8 @@
     }
   },
   "files": [
-    "dist/**"
+    "dist/**",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsdown src/SwellContainer.ts --format esm,cjs --dts",
@@ -37,8 +40,6 @@
     "container",
     "typescript"
   ],
-  "author": "",
-  "license": "ISC",
   "packageManager": "pnpm@11.12.0",
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.5",
