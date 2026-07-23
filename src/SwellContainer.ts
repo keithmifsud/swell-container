@@ -1,7 +1,7 @@
-import type { BindingConfig } from './contracts/BindingConfig';
 import { BindingNotFound } from './errors/BindingNotFound';
+import type { ContainerRegistry } from './contracts/ContainerRegistry';
 
-export class SwellContainer<TRegistry extends Record<string, BindingConfig<any>>> {
+export class SwellContainer<TRegistry extends ContainerRegistry> {
   private readonly registry: TRegistry;
   private readonly instances = new Map<keyof TRegistry, any>();
 
@@ -9,7 +9,7 @@ export class SwellContainer<TRegistry extends Record<string, BindingConfig<any>>
     this.registry = registry;
   }
 
-  public static init<T extends Record<string, BindingConfig<any>>> (
+  public static init<T extends ContainerRegistry> (
     registry: T
   ): SwellContainer<T> {
     return new SwellContainer(registry);
