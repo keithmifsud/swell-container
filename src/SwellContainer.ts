@@ -9,7 +9,7 @@ export class SwellContainer<TRegistry extends ContainerRegistry> {
     this.registry = registry;
   }
 
-  public static init<T extends ContainerRegistry> (
+  public static init<const T extends ContainerRegistry> (
     registry: T
   ): SwellContainer<T> {
     return new SwellContainer(registry);
