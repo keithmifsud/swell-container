@@ -36,14 +36,16 @@
     "dist/**",
     "LICENSE"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsdown src/index.ts --format esm,cjs --dts",
     "dev": "tsdown src/index.ts --format esm,cjs --dts --watch",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "package": "pnpm pack",
-    "prepublishOnly": "pnpm run build && publint && attw --pack",
-    "publish": "pnpm publish --access public"
+    "prepublishOnly": "pnpm run build && publint && attw --pack"
   },
   "keywords": [
     "dependency-injection",
